@@ -44,11 +44,6 @@ plt.show()
 
 ```
 ## Output
-
-</br>
 ![image](https://github.com/user-attachments/assets/e6c867d8-b926-4029-9e46-1588fb30f02f)
-
-</br>
-
 ## Result
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares.
