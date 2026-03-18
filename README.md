@@ -19,37 +19,35 @@ Register Number : 212225100046
 ```
 import numpy as np
 import matplotlib.pyplot as plt
-x=np.array([0,1,2,3,4,5,6,7,8,9])
-y=np.array([1,3,2,5,7,8,8,9,10,12])
-plt.scatter(x,y)
+
+X = np.array(eval(input()))
+Y = np.array(eval(input()))
+
+Xmean = np.mean(X)
+Ymean = np.mean(Y)
+num,den = 0,0
+for i in range(len(X)):
+    num += (X[i]-Xmean)*(Y[i]-Ymean)
+    den += (X[i]-Xmean)**2
+m = num/den
+c = Ymean-m*Xmean
+    
+print (m, c)
+
+Y_pred = m*X + c
+print (Y_pred)
+
+plt.scatter(X,Y)
+plt.plot(X,Y_pred,color="red")
 plt.show()
-
-
-x_mean=np.mean(x)
-y_mean=np.mean(y)
-num=0
-den=0
-for i in range(len(x)):
-num+=(x[i]-x_mean)*(y[i]-y_mean)
-den+=(x[i]-x_mean)**2
-m=num/den
-c=y_mean-m*x_mean
-print(m,c) 
-
-
-
-y_pred=m*x+c
-print(y_pred)
-plt.scatter(x,y)
-plt.plot([min(x),max(x)],[min(y_pred),max(y_pred)],color='red')
-plt.show() 
 
 
 ```
 ## Output
-![alt text](image.png)
+
 </br>
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/e6c867d8-b926-4029-9e46-1588fb30f02f)
+
 </br>
 
 ## Result
